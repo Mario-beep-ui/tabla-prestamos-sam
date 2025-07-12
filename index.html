@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Préstamos Responsivo - Sam & Pareja</title>
+    <title>Registro de Préstamos sam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,201 +14,269 @@
         }
         
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            background: linear-gradient(135deg, #f0f5ff 0%, #e6f0ff 100%);
             min-height: 100vh;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            color: #2d3748;
         }
         
         .container {
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
             background-color: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            margin: 20px 0;
+            position: relative;
         }
         
         header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, #4a6bff 0%, #3a0ca3 100%);
             color: white;
-            padding: 25px 30px;
+            padding: 30px;
             text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233a0ca3' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.15;
         }
         
         header h1 {
-            font-weight: 600;
-            font-size: 28px;
+            font-weight: 700;
+            font-size: 36px;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         header p {
             opacity: 0.9;
-            font-size: 16px;
+            font-size: 18px;
+            position: relative;
+            z-index: 2;
+            max-width: 500px;
+            margin: 0 auto;
+            font-weight: 300;
         }
         
         .content {
-            padding: 30px;
+            padding: 35px 40px;
         }
         
         .summary {
-            background-color: #f8f9ff;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 30px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #edf1ff 100%);
+            border-radius: 18px;
+            padding: 25px 30px;
+            margin-bottom: 35px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-            border: 1px solid #eef2f7;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e7ff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .summary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 107, 255, 0.1) 0%, rgba(58, 12, 163, 0.1) 100%);
+            transform: skewX(-20deg);
+            transform-origin: top right;
         }
         
         .total-box {
-            text-align: center;
-            flex: 1;
-            min-width: 200px;
+            text-align: left;
+            z-index: 1;
         }
         
         .total-label {
-            font-size: 16px;
-            color: #666;
+            font-size: 18px;
+            color: #4c5a76;
             margin-bottom: 8px;
+            font-weight: 500;
         }
         
         .total-amount {
-            font-size: 32px;
-            font-weight: 700;
-            color: #2575fc;
+            font-size: 42px;
+            font-weight: 800;
+            color: #4a6bff;
+            letter-spacing: -1px;
         }
         
         .add-loan-btn {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, #4a6bff 0%, #3a0ca3 100%);
             color: white;
             border: none;
-            border-radius: 50px;
-            padding: 14px 28px;
-            font-size: 16px;
+            border-radius: 15px;
+            padding: 18px 36px;
+            font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
-            min-width: 250px;
-            flex: 1;
+            gap: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(74, 107, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .add-loan-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #3a0ca3 0%, #4a6bff 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
         .add-loan-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 117, 252, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(74, 107, 255, 0.4);
+        }
+        
+        .add-loan-btn:hover::before {
+            opacity: 1;
         }
         
         .add-loan-btn:active {
             transform: translateY(0);
         }
         
-        .loans-container {
-            overflow-x: auto;
-            margin-top: 20px;
-            border-radius: 12px;
-            border: 1px solid #edf2f7;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-        }
-        
         .loans-table {
             width: 100%;
-            border-collapse: collapse;
-            min-width: 500px;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 20px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
         }
         
         .loans-table th {
-            background-color: #f1f5fd;
-            padding: 16px 15px;
+            background-color: #f1f5ff;
+            padding: 20px;
             text-align: left;
-            font-weight: 600;
-            color: #444;
-            border-bottom: 2px solid #e2e8f0;
+            font-weight: 700;
+            color: #3d4a76;
+            font-size: 17px;
+        }
+        
+        .loans-table th:first-child {
+            border-top-left-radius: 16px;
+        }
+        
+        .loans-table th:last-child {
+            border-top-right-radius: 16px;
         }
         
         .loans-table td {
-            padding: 18px 15px;
-            border-bottom: 1px solid #edf2f7;
+            padding: 22px 20px;
+            border-bottom: 1px solid #f1f5ff;
+            font-size: 17px;
         }
         
         .loans-table tr:last-child td {
             border-bottom: none;
         }
         
-        .loans-table tr:hover {
+        .loans-table tr:not(.tfoot-row):hover {
             background-color: #f8faff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
         
         .amount-cell {
-            font-weight: 600;
+            font-weight: 700;
             color: #2d3748;
+            font-size: 18px;
         }
         
         .concept-cell {
             color: #4a5568;
+            max-width: 350px;
+            line-height: 1.5;
         }
         
         .actions-cell {
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
         
         .action-btn {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
             border: none;
+            background-color: #f8f9ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
         }
         
         .edit-btn {
-            background-color: #e6f2ff;
-            color: #3182ce;
+            color: #4a6bff;
+            border: 1px solid #e0e7ff;
         }
         
         .edit-btn:hover {
-            background-color: #3182ce;
+            background-color: #4a6bff;
             color: white;
+            border-color: #4a6bff;
+            transform: scale(1.1);
         }
         
         .delete-btn {
-            background-color: #fff0f0;
-            color: #e53e3e;
+            color: #ff5c8d;
+            border: 1px solid #ffedf2;
         }
         
         .delete-btn:hover {
-            background-color: #e53e3e;
+            background-color: #ff5c8d;
             color: white;
+            border-color: #ff5c8d;
+            transform: scale(1.1);
         }
         
         .tfoot-row {
-            background-color: #f1f5fd;
-            font-weight: 600;
+            background-color: #f1f5ff;
+            font-weight: 800;
         }
         
         .tfoot-row td {
-            padding: 18px 15px;
-            font-size: 18px;
+            padding: 24px 20px;
+            font-size: 20px;
             color: #2d3748;
         }
         
@@ -223,19 +291,19 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
-            padding: 15px;
+            backdrop-filter: blur(4px);
         }
         
         .modal-content {
             background-color: white;
-            border-radius: 16px;
+            border-radius: 22px;
             width: 100%;
-            max-width: 450px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            transform: translateY(-20px);
+            transform: translateY(-40px);
             opacity: 0;
-            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+            transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.4s ease;
         }
         
         .modal.show .modal-content {
@@ -244,73 +312,89 @@
         }
         
         .modal-header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, #4a6bff 0%, #3a0ca3 100%);
             color: white;
-            padding: 20px;
+            padding: 28px 30px;
             text-align: center;
             position: relative;
         }
         
         .modal-header h2 {
-            font-weight: 600;
-            font-size: 22px;
+            font-weight: 700;
+            font-size: 26px;
+            letter-spacing: -0.3px;
         }
         
         .close-btn {
             position: absolute;
-            top: 18px;
-            right: 20px;
-            font-size: 24px;
+            top: 22px;
+            right: 28px;
+            font-size: 28px;
             cursor: pointer;
             color: white;
             background: none;
             border: none;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .close-btn:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: rotate(90deg);
         }
         
         .modal-body {
-            padding: 30px;
+            padding: 35px 30px;
         }
         
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
+            margin-bottom: 12px;
+            font-weight: 600;
             color: #4a5568;
+            font-size: 17px;
         }
         
         .form-control {
             width: 100%;
-            padding: 14px 16px;
+            padding: 17px 20px;
             border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: border-color 0.2s;
+            border-radius: 14px;
+            font-size: 17px;
+            transition: all 0.3s;
             background-color: #f8fafc;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.04);
         }
         
         .form-control:focus {
             outline: none;
-            border-color: #2575fc;
-            box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
+            border-color: #4a6bff;
+            box-shadow: 0 0 0 4px rgba(74, 107, 255, 0.2);
+            background-color: white;
         }
         
         .modal-footer {
             padding: 0 30px 30px;
             display: flex;
-            gap: 15px;
+            gap: 18px;
         }
         
         .btn {
-            padding: 14px 24px;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
+            padding: 18px 28px;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
             border: none;
             flex: 1;
         }
@@ -318,143 +402,134 @@
         .btn-cancel {
             background-color: #f1f5f9;
             color: #4a5568;
+            border: 1px solid #e2e8f0;
         }
         
         .btn-cancel:hover {
             background-color: #e2e8f0;
+            transform: translateY(-2px);
         }
         
         .btn-save {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, #4a6bff 0%, #3a0ca3 100%);
             color: white;
-            box-shadow: 0 4px 12px rgba(37, 117, 252, 0.3);
+            box-shadow: 0 8px 20px rgba(74, 107, 255, 0.35);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-save::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #3a0ca3 0%, #4a6bff 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
         .btn-save:hover {
-            box-shadow: 0 6px 16px rgba(37, 117, 252, 0.4);
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(74, 107, 255, 0.45);
+        }
+        
+        .btn-save:hover::before {
+            opacity: 1;
         }
         
         .empty-state {
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             color: #a0aec0;
         }
         
         .empty-state i {
-            font-size: 64px;
-            margin-bottom: 20px;
-            opacity: 0.3;
+            font-size: 80px;
+            margin-bottom: 30px;
+            opacity: 0.2;
         }
         
         .empty-state p {
-            font-size: 18px;
+            font-size: 20px;
+            max-width: 350px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
         
-        /* Estilos responsivos */
+        .storage-info {
+            position: absolute;
+            bottom: 20px;
+            right: 25px;
+            background: rgba(74, 107, 255, 0.12);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            color: #4a6bff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(74, 107, 255, 0.15);
+        }
+        
+        .date-cell {
+            font-size: 15px;
+            color: #718096;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: #4a6bff;
+            color: white;
+            padding: 18px 25px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(74, 107, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 2000;
+            transform: translateX(150%);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
         @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                border-radius: 12px;
-            }
-            
-            header {
-                padding: 20px 15px;
-            }
-            
-            header h1 {
-                font-size: 24px;
-                flex-direction: column;
-                gap: 8px;
-            }
-            
             .content {
-                padding: 20px 15px;
+                padding: 25px;
             }
             
             .summary {
                 flex-direction: column;
+                gap: 25px;
                 text-align: center;
-                padding: 15px;
             }
             
-            .total-box {
-                min-width: 100%;
-            }
-            
-            .add-loan-btn {
-                min-width: 100%;
-                padding: 12px 20px;
-            }
-            
-            .loans-table th, 
-            .loans-table td {
-                padding: 12px 10px;
-                font-size: 14px;
-            }
-            
-            .tfoot-row td {
-                padding: 12px 10px;
-                font-size: 16px;
-            }
-            
-            .actions-cell {
-                justify-content: center;
-            }
-            
-            .modal-body {
-                padding: 20px;
-            }
-            
-            .modal-footer {
-                padding: 0 20px 20px;
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 22px;
-            }
-            
-            header p {
-                font-size: 14px;
-            }
-            
-            .total-amount {
-                font-size: 28px;
+            .loans-table {
+                display: block;
+                overflow-x: auto;
             }
             
             .modal-content {
-                border-radius: 12px;
+                max-width: 90%;
             }
             
-            .form-control {
-                padding: 12px 14px;
-                font-size: 15px;
-            }
-        }
-        
-        /* Estilos para pantallas pequeñas */
-        @media (max-width: 360px) {
-            .add-loan-btn {
-                font-size: 14px;
+            .storage-info {
+                position: static;
+                margin-top: 25px;
+                display: inline-flex;
             }
             
-            .loans-table th, 
-            .loans-table td {
-                padding: 10px 8px;
-                font-size: 13px;
-            }
-            
-            .action-btn {
-                width: 32px;
-                height: 32px;
-                font-size: 14px;
+            header h1 {
+                font-size: 28px;
             }
         }
     </style>
@@ -462,8 +537,8 @@
 <body>
     <div class="container">
         <header>
-            <h1><i class="fas fa-hand-holding-usd"></i> Registro de Préstamos entre yo y Sam ❤😍</h1>
-            <p></p>
+            <h1><i class="fas fa-hand-holding-usd"></i> Préstamos Sam</h1>
+            <p>Registro prestamos de mi niña ❤</p>
         </header>
         
         <div class="content">
@@ -473,37 +548,41 @@
                     <div class="total-amount">$<span id="total-amount">0.00</span></div>
                 </div>
                 <button class="add-loan-btn" id="add-loan-btn">
-                    <i class="fas fa-plus-circle"></i> Agregar préstamo Sam
+                    <i class="fas fa-plus-circle"></i> Nuevo Préstamo
                 </button>
             </div>
             
-            <div class="loans-container">
-                <table class="loans-table">
-                    <thead>
-                        <tr>
-                            <th>Cantidad</th>
-                            <th>Concepto</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody id="loans-body">
-                        <!-- Las filas de préstamos se generarán aquí dinámicamente -->
-                        <tr id="empty-row">
-                            <td colspan="3">
-                                <div class="empty-state">
-                                    <i class="fas fa-inbox"></i>
-                                    <p>No hay préstamos registrados</p>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr class="tfoot-row">
-                            <td colspan="2" style="text-align: right;">Total:</td>
-                            <td class="amount-cell">$<span id="table-total">0.00</span></td>
-                        </tr>
-                    </tfoot>
-                </table>
+            <table class="loans-table">
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">Cantidad</th>
+                        <th style="width: 45%;">Concepto</th>
+                        <th style="width: 20%;">Fecha</th>
+                        <th style="width: 20%;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="loans-body">
+                    <!-- Las filas de préstamos se generarán aquí dinámicamente -->
+                    <tr class="empty-row">
+                        <td colspan="4">
+                            <div class="empty-state">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <p>No hay préstamos registrados aún</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="tfoot-row">
+                        <td colspan="3" style="text-align: right; padding-right: 20px;">Total:</td>
+                        <td class="amount-cell">$<span id="table-total">0.00</span></td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <div class="storage-info">
+                <i class="fas fa-database"></i>
+                <span>Datos guardados en tu navegador</span>
             </div>
         </div>
     </div>
@@ -518,7 +597,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="loan-amount">Cantidad ($)</label>
-                    <input type="number" id="loan-amount" class="form-control" placeholder="Ej. 150.00" min="0" step="0.01">
+                    <input type="number" id="loan-amount" class="form-control" placeholder="Ej: 150.50" min="0" step="0.01">
                 </div>
                 <div class="form-group">
                     <label for="loan-concept">Concepto</label>
@@ -527,14 +606,19 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-cancel" id="cancel-loan">Cancelar</button>
-                <button class="btn btn-save" id="save-loan">Finalizar</button>
+                <button class="btn btn-save" id="save-loan">Guardar</button>
             </div>
         </div>
     </div>
+    
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-text">Operación realizada con éxito</span>
+    </div>
 
     <script>
-        // Datos iniciales
-        let loans = [];
+        // Datos iniciales - ahora cargados desde localStorage
+        let loans = JSON.parse(localStorage.getItem('prestamosSam')) || [];
         let editingId = null;
         
         // Elementos del DOM
@@ -549,7 +633,28 @@
         const loanAmount = document.getElementById('loan-amount');
         const loanConcept = document.getElementById('loan-concept');
         const modalTitle = document.getElementById('modal-title');
-        const emptyRow = document.getElementById('empty-row');
+        const emptyRow = document.querySelector('.empty-row');
+        const notification = document.getElementById('notification');
+        const notificationText = document.getElementById('notification-text');
+        
+        // Formateador de fechas
+        const dateFormatter = new Intl.DateTimeFormat('es-ES', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        
+        // Mostrar notificación
+        function showNotification(message) {
+            notificationText.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
         
         // Abrir modal para nuevo préstamo
         addLoanBtn.addEventListener('click', () => {
@@ -580,20 +685,21 @@
             const amount = parseFloat(loanAmount.value);
             const concept = loanConcept.value.trim();
             
+            // Validación
             if (isNaN(amount)) {
-                alert('Por favor ingresa una cantidad válida');
+                showNotification('Por favor ingresa una cantidad válida');
                 loanAmount.focus();
                 return;
             }
             
             if (amount <= 0) {
-                alert('La cantidad debe ser mayor a cero');
+                showNotification('La cantidad debe ser mayor a cero');
                 loanAmount.focus();
                 return;
             }
             
             if (concept === '') {
-                alert('Por favor ingresa un concepto');
+                showNotification('Por favor ingresa un concepto');
                 loanConcept.focus();
                 return;
             }
@@ -607,14 +713,19 @@
                     date: new Date()
                 };
                 loans.push(newLoan);
+                showNotification('Préstamo agregado con éxito');
             } else {
                 // Editar préstamo existente
                 const loanIndex = loans.findIndex(loan => loan.id === editingId);
                 if (loanIndex !== -1) {
                     loans[loanIndex].amount = amount;
                     loans[loanIndex].concept = concept;
+                    showNotification('Préstamo actualizado con éxito');
                 }
             }
+            
+            // Guardar en localStorage
+            localStorage.setItem('prestamosSam', JSON.stringify(loans));
             
             updateLoansTable();
             closeLoanModal();
@@ -636,15 +747,19 @@
             }
         }
         
-        // Eliminar préstamo
+        // Eliminar préstamo (FUNCIÓN CORREGIDA)
         function deleteLoan(id) {
             if (confirm('¿Estás seguro de que quieres eliminar este préstamo?')) {
-                const loanIndex = loans.findIndex(loan => loan.id === id);
+                // Filtrar el array para eliminar el préstamo
+                loans = loans.filter(loan => loan.id !== id);
                 
-                if (loanIndex !== -1) {
-                    loans.splice(loanIndex, 1);
-                    updateLoansTable();
-                }
+                // Actualizar localStorage
+                localStorage.setItem('prestamosSam', JSON.stringify(loans));
+                
+                // Actualizar la tabla
+                updateLoansTable();
+                
+                showNotification('Préstamo eliminado con éxito');
             }
         }
         
@@ -657,32 +772,32 @@
             
             // Actualizar tabla
             if (loans.length === 0) {
-                loansBody.innerHTML = '';
-                loansBody.appendChild(emptyRow);
-                emptyRow.style.display = 'table-row';
-            } else {
-                emptyRow.style.display = 'none';
-                
-                loansBody.innerHTML = '';
-                loans.forEach(loan => {
-                    const row = document.createElement('tr');
-                    
-                    row.innerHTML = `
-                        <td class="amount-cell">$${loan.amount.toFixed(2)}</td>
-                        <td class="concept-cell">${loan.concept}</td>
-                        <td class="actions-cell">
-                            <button class="action-btn edit-btn" onclick="editLoan(${loan.id})">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="action-btn delete-btn" onclick="deleteLoan(${loan.id})">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </td>
-                    `;
-                    
-                    loansBody.appendChild(row);
-                });
+                emptyRow.style.display = '';
+                return;
             }
+            
+            emptyRow.style.display = 'none';
+            
+            loansBody.innerHTML = '';
+            loans.forEach(loan => {
+                const row = document.createElement('tr');
+                
+                row.innerHTML = `
+                    <td class="amount-cell">$${loan.amount.toFixed(2)}</td>
+                    <td class="concept-cell">${loan.concept}</td>
+                    <td class="date-cell">${dateFormatter.format(new Date(loan.date))}</td>
+                    <td class="actions-cell">
+                        <button class="action-btn edit-btn" onclick="editLoan(${loan.id})">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn delete-btn" onclick="deleteLoan(${loan.id})">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                `;
+                
+                loansBody.appendChild(row);
+            });
         }
         
         // Cerrar modal al hacer clic fuera del contenido
@@ -692,8 +807,12 @@
             }
         });
         
-        // Inicializar tabla
-        updateLoansTable();
+        // Inicializar tabla al cargar la página
+        document.addEventListener('DOMContentLoaded', updateLoansTable);
+        
+        // Hacer las funciones accesibles globalmente
+        window.editLoan = editLoan;
+        window.deleteLoan = deleteLoan;
     </script>
 </body>
 </html>
